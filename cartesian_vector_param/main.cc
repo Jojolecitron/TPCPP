@@ -13,7 +13,6 @@ void testInit()
     // This needs an constructor accepting a std::initializer_list
     auto v = Vector{ 4, 7 };
     auto t = Vector{ -1, 6 };
-    std::cout << "test \n";
     std::cout << u + v << '\n'; // {4,7}
     u += Vector{ 1, 8 };
     std::cout << u << '\n'; // {1,8}
@@ -119,7 +118,7 @@ void testVar(size_t n, int argc, char* argv[])
         }
     value sum = 0;
     for (size_t i = 1; i < n; i += 2)
-        //sum += v[i-1]*v[i];
+        sum += v[i-1]*v[i];
     std::cout << sum;
     std::cout.put('\n');
 }
