@@ -32,7 +32,7 @@ int main(){
     int n;
     cin >> n;
     do{
-        cout << n << " is prime: " << (is_prime(n) ? "True": "False") << endl;
+        cout << n << " is a prime: " << (is_prime(n) ? "True": "False") << endl;
         cin >> n;
     }while(cin);
     // int t = time_is_prime();
