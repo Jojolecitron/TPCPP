@@ -109,10 +109,12 @@ Vector mul_val(const Vector rhs, const value k){
 }
 
 std::ostream& operator<<(std::ostream& os, Vector v){
-    for(int i=0; i<NDIM; i++){
-        os << i <<": " << v[i] << "; ";
+    os << '{';
+    os << v[0];
+    for(int i=1; i<NDIM; i++){
+        os << ", " << v[i];
     }
-    os << '\n';
+    os << '}';
     return os;
 }
 
