@@ -35,10 +35,10 @@ int find_motive(string filename, string motive){
 }
 
 
-int main(){
-    string filename, motive;
-    cin >> filename;
-    cin >> motive;
-    find_motive(filename, motive);
+int main(int argc, char* argv[]){
+    if(argc == 3)
+        find_motive(argv[1], argv[2]);
+    else
+        cout << "nombre d'argument mauvais " << argc << '\n' ;
     return 0;
 }
