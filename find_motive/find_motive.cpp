@@ -8,7 +8,7 @@ int find_motive(string filename, string motive){
     ifstream file (filename); 
     string line;
     if(!file.is_open()){
-        cout << "The file " << filename << "could not be opened." << endl;
+        cout << "The file " << filename << " could not be opened." << endl;
         return 1;
     }   
     int pos(0);
@@ -30,14 +30,14 @@ int find_motive(string filename, string motive){
             }
         }
     }
-    cout << "The file " << filename << " contains " << nb_it << " words containing " << motive << endl;
+    cout << "The file " << filename << " contains " << nb_it << " words containing the motive " << motive << endl;
     return 0;
 }
 
 
 int main(int argc, char* argv[]){
     if(argc == 3)
-        find_motive(argv[1], argv[2]);
+        return find_motive(argv[1], argv[2]);
     else
         cout << "nombre d'argument mauvais " << argc << '\n' ;
     return 0;
