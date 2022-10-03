@@ -5,10 +5,13 @@ using namespace std;
 
 int is_prime(int value){
     int i(0);
-    if (value == 2 | value == 1){
+    if (value == 1){
+        return 0;
+    }
+    if (value == 2){
         return 1;
     }
-    if (value%2 == 0){
+    else if (value%2 == 0){
         return 0;
     }
     for(i = 3; i<sqrt(value); i+=2){
