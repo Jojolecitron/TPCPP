@@ -72,12 +72,14 @@ void testAdd(size_t n)
     auto vv = generate(n);
 
     // Add to each Vector his right neighbour
-    for (size_t i = 1; i < n; ++i)
+    for (size_t i = 1; i < n; ++i){
         vv[i-1] += vv[i];
+    }
     // Sum them up
     auto sum = Vector(); // Expected to be all zeros
-    for (const auto& other : vv)
+    for (const auto& other : vv){
         sum = sum + other;
+    }
     // Print for verif
     std::cout << sum << '\n';
 }
