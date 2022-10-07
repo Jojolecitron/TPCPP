@@ -112,7 +112,7 @@ std::ostream& operator<<(std::ostream& os, Vector v){
     os << '{';
     os << v[0];
     for(int i=1; i<NDIM; i++){
-        os << ", " << v[i];
+        os << "," << v[i];
     }
     os << '}';
     return os;
