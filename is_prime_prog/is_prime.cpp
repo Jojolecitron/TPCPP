@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-int is_prime(int value){
+int is_prime(unsigned long long int value){
     int i(0);
     if (value == 1){
         return 0;
@@ -32,10 +32,10 @@ int time_is_prime(void){
 
 
 int main(){
-    int n;
+    unsigned long long int n;
     cin >> n;
     do{
-        cout << n << " is a prime: " << (is_prime(n) ? "True": "False") << endl;
+        cout << n << " is a prime: " << (is_prime(n) ? "True": "False") << '\n';
         cin >> n;
     }while(cin);
     // int t = time_is_prime();
