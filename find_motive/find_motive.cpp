@@ -20,6 +20,7 @@ int find_motive(std::string filename, std::string motive){
         file >> mot;
     }
     std::cout << "The file " << filename << " contains " << nb_it << " words containing the motive " << motive << std::endl;
+    file.close();
     return 0;
 }
 
