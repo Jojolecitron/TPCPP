@@ -12,12 +12,11 @@ int find_motive(std::string filename, std::string motive){
     }
     int nb_it(0);
     std::string mot;
-    file >> mot;
     while(!file.eof()){
+        file >> mot;
         if(mot.find(motive) != std::string::npos){
             nb_it++;
-        }
-        file >> mot;
+        }   
     }
     std::cout << "The file " << filename << " contains " << nb_it << " words containing the motive " << motive << std::endl;
     file.close();
